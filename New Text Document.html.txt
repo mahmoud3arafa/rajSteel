@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة راس الجبل لتجارة الحديد</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 150px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p, ul {
+            color: #666;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الصفحة الرئيسية -->
+    <div id="homePage" class="container">
+        <img src="file:///C:/Users/user/OneDrive/Desktop/New%20folder%20(4)/WhatsApp%20Image%202025-02-02%20at%2021.14.01_9e840bcc.jpg" alt="شعار رأس الجبل" class="logo">
+        <h1>شركة راس الجبل لتجارة الحديد</h1>
+        <button class="btn" onclick="showDetails()">المزيد من التفاصيل</button>
+    </div>
+
+    <!-- صفحة التفاصيل -->
+    <div id="detailsPage" class="container hidden">
+        <h1> شركة راس الجبل لتجارة الحديد</h1>
+        <p>نحن متخصصون في تجارة المعادن، نقدم حلولاً متكاملة لمختلف الصناعات.</p>
+        <h2>معلومات التواصل</h2>
+        <p><strong>الهاتف:</strong> +962796898403</p>
+        <p><strong>الهاتف:</strong> +962796744020</p>
+
+        <p><strong>البريد الإلكتروني:</strong> rajsteel176@gmail.com</p>
+        <h2>خدماتنا</h2>
+        <ul>
+            <li>تجارة المعادن الصناعية</li>
+            <li>تصدير وتوريد المعادن</li>
+            <li>توفير المواد الخام للصناعات</li>
+            <li>إعادة تدوير المعادن</li>
+        </ul>
+        <button class="btn" onclick="showHome()">العودة للصفحة الرئيسية</button>
+    </div>
+
+    <script>
+        function showDetails() {
+            document.getElementById('homePage').classList.add('hidden');
+            document.getElementById('detailsPage').classList.remove('hidden');
+        }
+
+        function showHome() {
+            document.getElementById('detailsPage').classList.add('hidden');
+            document.getElementById('homePage').classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
